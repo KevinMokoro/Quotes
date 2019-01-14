@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class QuoteComponent implements OnInit {
 
   quotes =  []
+  toogleDetails(index){
+        this.quotes[index].showDescription = !this.quotes[index].showDescription;
+    }
 
   constructor() { }
 
