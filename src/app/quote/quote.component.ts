@@ -26,6 +26,16 @@ export class QuoteComponent implements OnInit {
 
   }
 
+   upvoteQuote(value:0,):number{
+     let upVote:any= this.upvoteQuote(0);
+     var total=(value+upVote)
+       if (total >=1){
+         return total;
+           //this.goals(index,1);
+         }else{
+           return 0;
+         }
+           }
   constructor() { }
 
   ngOnInit() {
