@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class TimeCountPipe implements PipeTransform {
 
   transform(value: any): number {
-    let today:Date = new Date();
+    let today:any = new Date();
     var dateDifference = Math.abs(value-today)
 
     var dateDifferenceSeconds=dateDifference*0.001;

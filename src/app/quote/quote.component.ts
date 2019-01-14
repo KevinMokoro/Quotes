@@ -7,17 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuoteComponent implements OnInit {
 
-  quotes =  [
+  quotes = [
   ]
-  toogleDetails(index){
-        this.quotes[index].showDescription = !this.quotes[index].showDescription;
-    }
+  toogleDetails(index) {
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
 
-    completeQuote(isComplete,index){
-        if (isComplete){
-            this.quotes.splice(index,1);
-            }
-          }
+  completeQuote(isComplete, index) {
+    if (isComplete) {
+      this.quotes.splice(index, 1);
+    }
+  }
+  addNewQuote(quote) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.postDate = new Date(quote.postDate)
+    this.quotes.push(quote)
+
+  }
 
   constructor() { }
 
