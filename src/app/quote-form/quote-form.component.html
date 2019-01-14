@@ -14,10 +14,20 @@
       </div>
       <div class="form-group">
 
-        <label for="description">Description</label>
-        <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required></textarea>
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username"  [(ngModel)]="newQuote.username" name="username" #username="ngModel" required>
+        <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
+          <p> Username is Required</p>
+
+        </div>
+
+      </div>
+      <div class="form-group">
+
+        <label for="description">Author</label>
+        <input type="text"  class="form-control" id="description"  [(ngModel)]="newQuote.description" name="description" #description="ngModel" required>
         <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
-          <p> Description is Required</p>
+          <p> Author is Required</p>
 
         </div>
 

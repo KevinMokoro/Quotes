@@ -11,7 +11,7 @@ export class TimeCountPipe implements PipeTransform {
 
     var dateDifferenceSeconds=dateDifference*0.001;
     var dateCounter = dateDifferenceSeconds
-    if (dateCounter >= 1 && value > today){
+    if (dateCounter >= 1 && value < today){
         return dateCounter;
     }else{
         return 0;
