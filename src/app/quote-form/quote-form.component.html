@@ -32,14 +32,6 @@
         </div>
 
       </div>
-      <div class="form-group">
-        <label for="date">Date</label>
-        <input type='date' id="date" [(ngModel)]="newQuote.postDate" name="postDate" #postDate="ngModel" required>
-        <div [hidden]="postDate.valid || postDate.pristine" class="alert alert-danger">
-          <p>Date is Required</p>
-
-        </div>
-      </div>
       <button type="Submit" class="btn btn-primary btn-lg">Post</button>
     </form>
   </div>
