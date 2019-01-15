@@ -2,5 +2,5 @@
 <p>Username:{{quote.username}}</p>
 <p>Time since post {{quote.postDate|timeCount}}    seconds</p>
 <button class="btn btn-danger"(click) = 'quoteComplete(true)'> Delete </button>
-<button (click) = 'quoteUpvote(true)'> Upvote </button>
-<button (click) = 'quoteDownvote(true)'> Downvote </button>
+<button  (click)="upVotes()"> Upvote:{{upVote}} </button>
+<button (click) = "downVotes()"> Downvote:{{downVote}} </button>
