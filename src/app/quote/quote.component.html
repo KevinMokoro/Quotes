@@ -1,19 +1,25 @@
-<div class="jumbotron">
-<h1>Quotes</h1>
-</div>
-<hr>
-<div class="container">
-    <div class="row">
-        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-    </div>
-</div>
-<div class="container">
-  <p>Today's Quotes</p>
-<ul>
-  <div *ngFor='let quote of quotes;let i = index'>
-    <li>{{quote.name}}</li>
-    <button  (click)='toogleDetails(i)'>Details</button>
-    <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuote($event,i)' (isUpvote)= 'upvoteQuote($event,i)' (isDownvote)= 'downvoteQuote($event,i)'></app-quote-details>
+<body>
+  <div class="jumbotron">
+    <h1>Quotes</h1>
+    <h2 id="quotes">Don't think its intresting?Write for others to decide</h2>
   </div>
-</ul>
+
+  <div class="container">
+    <div class="row">
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+  </div>
+  <div class="container">
+    <p>Today's Quotes</p>
+    <ul>
+      <div *ngFor='let quote of quotes;let i = index'>
+        <li>{{quote.name}}</li>
+        <button (click)='toogleDetails(i)'>Details</button>
+        <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='completeQuote($event,i)' (isUpvote)='upvoteQuote($event,i)' (isDownvote)='downvoteQuote($event,i)'></app-quote-details>
+      </div>
+    </ul>
+  </div>
+  <div class="footer">
+  <h2 id="quote">"Be Smart Understand The Quote"</h2>
 </div>
+</body>

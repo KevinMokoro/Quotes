@@ -1,14 +1,33 @@
-.container{
-  background-color:olive;
+  .container{
+  background-color:#3b4a63;
+  text-align: center;
 }
 h1{
   font-size: 100px;
+  text-align: center;
+  color: #7f98c4;
+  font-style: italic;
 }
 p{
   color: white;
   font-size: 50px;
 
+
 }
 .row{
   font-size: 21px;
+}
+body{
+  background-color: #5b6577;
+}
+#quote{
+  color: white;
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+}
+#quotes{
+  text-align: center;
+  font-style: italic;
+  font-size: 15px;
 }
